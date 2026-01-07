@@ -1,0 +1,15 @@
+default:
+    suites:
+        default:
+            contexts:
+                - App\Tests\Context\FeatureContext
+                - App\Tests\Context\FoundryFixHookContext
+                - Behat\MinkExtension\Context\MinkContext
+    extensions:
+        Behat\MinkExtension:
+            base_url: 'http://127.0.0.1:8017'
+            sessions:
+                symfony:
+                    symfony: ~
+        FriendsOfBehat\SymfonyExtension:
+            bootstrap: tests/bootstrap.php

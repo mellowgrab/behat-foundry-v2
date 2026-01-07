@@ -1,0 +1,13 @@
+services:
+    _defaults:
+        autowire: true
+        autoconfigure: true
+        public: true
+
+    App\:
+        resource: '../src/'
+        public: true
+
+    App\Tests\Context\:
+        resource: '../tests/Context/*'
+        public: true

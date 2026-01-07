@@ -1,0 +1,20 @@
+{
+    "name": "PHP 8.4 Development",
+    "image": "mcr.microsoft.com/devcontainers/php:8.4",
+    "features": {
+        "ghcr.io/devcontainers/features/php:1": {
+            "version": "8.4"
+        }
+    },
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "bmewburn.vscode-intelephense-client"
+            ]
+        }
+    },
+    "build": {
+        "dockerfile": "Dockerfile"
+    },
+    "postCreateCommand": "composer install && bin/console -e test doctrine:schema:create"
+}
